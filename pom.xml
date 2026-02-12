@@ -35,18 +35,22 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-					<cloudhub2Deployment>
+				<cloudhub2Deployment>
     <uri>https://anypoint.mulesoft.com</uri>
     <provider>MC</provider>
     <environment>Sandbox</environment>
     <target>Cloudhub-US-East-2</target>
     <muleVersion>4.6.2</muleVersion>
-    <connectedAppClientId>aac0287fb8e6461990f624b27120045f</connectedAppClientId>
-    <connectedAppClientSecret>5e165DB197F74400b2C9d4AE1535c899</connectedAppClientSecret>
+    
+    <!-- Username/Password - NO grant_type issues -->
+    <username>Priya-ic</username>
+    <password>Triveni@6305</password>
+    
     <applicationName>priya-api</applicationName>
     <replicas>1</replicas>
     <vCores>0.1</vCores>
 </cloudhub2Deployment>
+
 
 				</configuration>
 			</plugin>
