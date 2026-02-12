@@ -30,18 +30,17 @@
                <version>${mule.maven.plugin.version}</version>
                <extensions>true</extensions>
         <configuration>
-        <cloudHubDeployment>
-            <uri>https://anypoint.mulesoft.com</uri>
-            <muleVersion>${mule.version}</muleVersion>
-            <username>${anypoint.username}</username>
-            <password>${anypoint.password}</password>
-            <environment>${env}</environment>
-            <applicationName>${appname}</applicationName>
-            <businessGroup>${business}</businessGroup>
-            <workerType>${vCore}</workerType>
-            <workers>${workers}</workers>
-            <objectStoreV2>true</objectStoreV2>
-        </cloudHubDeployment>
+        <cloudhub2Deployment>
+    <uri>https://anypoint.mulesoft.com</uri>
+    <muleVersion>${mule.version}</muleVersion>
+    <username>${anypoint.username}</username>
+    <password>${anypoint.password}</password>
+    <environment>${env}</environment>
+    <applicationName>${appname}</applicationName>
+    <target>Shared Space</target>
+    <replicas>${workers}</replicas>
+    <vCores>${vCore}</vCores>
+    </cloudhub2Deployment>
       </configuration>
         </plugin>
 		</plugins>
