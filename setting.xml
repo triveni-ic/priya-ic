@@ -5,15 +5,11 @@
           https://maven.apache.org/xsd/settings-1.0.0.xsd">
 
   <servers>
-
-    <!-- Used for Exchange Publish -->
     <server>
       <id>anypoint-exchange</id>
       <username>Priya-ic</username>
       <password>Triveni@6305</password>
     </server>
-
-    <!-- Used for CloudHub 2.0 Deployment -->
     <server>
       <id>anypoint-platform</id>
       <username>Priya-ic</username>
