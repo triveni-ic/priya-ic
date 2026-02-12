@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.mycompany</groupId>
@@ -10,17 +11,16 @@
 	<name>priya-api</name>
 
 	<properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    
-    <app.runtime>4.6.2</app.runtime>
-    <mule.maven.plugin.version>4.5.0</mule.maven.plugin.version>
-    <env>Sandbox</env>
-    <appname>priya-api</appname>
-    <workers>1</workers>
-    <mule.version>4.6.2</mule.version>
-</properties>
-
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		
+		<app.runtime>4.6.2</app.runtime>
+		<mule.maven.plugin.version>4.5.0</mule.maven.plugin.version>
+		<env>Sandbox</env>
+		<appname>priya-api</appname>
+		<workers>1</workers>
+		<mule.version>4.6.2</mule.version>
+	</properties>
 
 	<build>
 		<plugins>
@@ -30,27 +30,28 @@
 				<version>3.2.0</version>
 			</plugin>
 			<plugin>
-               <groupId>org.mule.tools.maven</groupId>
-               <artifactId>mule-maven-plugin</artifactId>
-               <version>${mule.maven.plugin.version}</version>
-               <extensions>true</extensions>
-        <configuration>
-        <cloudhub2Deployment>
-    <uri>https://anypoint.mulesoft.com</uri>
-    <provider>MC</provider>
-    <environment>${env}</environment>
-    **<target>Cloudhub-US-East-2</target>**  <!-- CHANGED us-east-1 → us-east-2 -->
-    <muleVersion>${mule.version}</muleVersion>
-    <username>${anypoint.username}</username>
-    <password>${anypoint.password}</password>
-    <applicationName>${appname}</applicationName>
-    <replicas>${workers}</replicas>
-    <vCores>0.1</vCores>
-</cloudhub2Deployment>
-      </configuration>
-        </plugin>
+				<groupId>org.mule.tools.maven</groupId>
+				<artifactId>mule-maven-plugin</artifactId>
+				<version>${mule.maven.plugin.version}</version>
+				<extensions>true</extensions>
+				<configuration>
+					<cloudhub2Deployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<provider>MC</provider>
+						<environment>Sandbox</environment>
+						<target>Cloudhub-US-East-2</target>
+						<muleVersion>4.6.2</muleVersion>
+						<username>Priya-ic</username>
+						<password>Triveni@6305</password>
+						<applicationName>priya-api</applicationName>
+						<replicas>1</replicas>
+						<vCores>0.1</vCores>
+					</cloudhub2Deployment>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.mule.connectors</groupId>
@@ -92,5 +93,4 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
-
 </project>
