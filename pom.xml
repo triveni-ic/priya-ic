@@ -32,15 +32,16 @@
         <configuration>
         <cloudhub2Deployment>
     <uri>https://anypoint.mulesoft.com</uri>
+    <provider>MC</provider>
+    <environment>${env}</environment>
+    <target>Shared Space</target>
     <muleVersion>${mule.version}</muleVersion>
     <username>${anypoint.username}</username>
     <password>${anypoint.password}</password>
-    <environment>${env}</environment>
     <applicationName>${appname}</applicationName>
-    <target>Shared Space</target>
     <replicas>${workers}</replicas>
     <vCores>${vCore}</vCores>
-    </cloudhub2Deployment>
+</cloudhub2Deployment>
       </configuration>
         </plugin>
 		</plugins>
