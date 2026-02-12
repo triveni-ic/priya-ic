@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="e71d7e49-5129-40b6-87db-753afa823b40" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="priya-apiFlow" doc:id="f5ce65f7-531a-4d57-bd2f-193801f432de" >
+		<http:listener doc:name="Listener" doc:id="b5d577c3-a8b0-4982-8a8b-95f11612f872" config-ref="HTTP_Listener_config" path="/priya"/>
+		<set-payload value='#["process is successful"]' doc:name="Set Payload" doc:id="2b7f11c0-c21e-4382-828a-0859efa6251a" />
+		<logger level="INFO" doc:name="Logger" doc:id="89269d92-6a84-4cb2-976d-dc34b9e7fdd7" message="#[payload]"/>
+	</flow>
+</mule>
