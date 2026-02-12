@@ -40,7 +40,7 @@
     <password>${anypoint.password}</password>
     <applicationName>${appname}</applicationName>
     <replicas>${workers}</replicas>
-    <vCores>${vCore}</vCores>
+    <vCores>0.1</vCores>
 </cloudhub2Deployment>
       </configuration>
         </plugin>
