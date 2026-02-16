@@ -19,7 +19,7 @@
 		<mule.maven.plugin.version>4.6.1</mule.maven.plugin.version>
 		<app.name>priya-api</app.name>
 		<anypoint.env>Sandbox</anypoint.env>
-		<business>Inherit Cloud</business>
+		<business>inherit cloud</business>
 	</properties>
 	<distributionManagement>
 		<repository>
