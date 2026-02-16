@@ -11,9 +11,10 @@
   <servers>
     <server>
       <id>exchange-repository</id>
-      <username>${client.id}</username>
-      <password>${client.secret}</password>
+      <username>~~~Client~~~</username>
+      <password>${client.id}~?~${client.secret}</password>
     </server>
   </servers>
 
 </settings>
+
